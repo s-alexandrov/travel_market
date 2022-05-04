@@ -23,3 +23,7 @@ pip3 install -r requirements.txt
 pytest
 ```
 ---
+## Логирование реализовано через пакет logging
+Подробнее https://docs.python.org/3/library/logging.html
+
+---
