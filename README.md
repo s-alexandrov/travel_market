@@ -1,4 +1,6 @@
 # TravelMarket
+[![Python application](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml/badge.svg)](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml)
+
 Автотесты для сайта https://cypress-tourism-app.herokuapp.com/
 
 Для локального запуска необходим Python версии 3.8 и выше.
