@@ -13,7 +13,7 @@ def pytest_addoption(parser):
         "--url",
         action="store",
         default="https://cypress-tourism-app.herokuapp.com/",
-        help="travel market",
+        help="Travel Market",
     ),
     parser.addoption("--headless", action="store_true", help="Headless mode"),
 
