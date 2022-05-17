@@ -19,7 +19,8 @@ class LoginNotice:
 
 
 class OrderNotice:
-    INDEX_TEXT = "Rest, which you deserve"
+    login = "qwerty"
+    password = "L38H84G4f53"
     BUTTON_MORE = "More"
     BUTTON_BOOK = "Book"
     BOOKED = "Booked"

@@ -6,13 +6,13 @@ class BasePage:
     def __init__(self, app):
         self.app = app
 
-    def _find_element(self, locator, wait_time=5):
+    def _find_element(self, locator, wait_time=20):
         element = WebDriverWait(self.app.driver, wait_time) \
             .until(expected_conditions.presence_of_element_located(locator),
                    message=f"Can't find element by locator {locator}")
         return element
 
-    def _find_elements(self, locator, wait_time=5):
+    def _find_elements(self, locator, wait_time=20):
         elements = WebDriverWait(self.app.driver, wait_time) \
             .until(expected_conditions.presence_of_all_elements_located(locator),
                    message=f"Can't find elements by locator {locator}")
