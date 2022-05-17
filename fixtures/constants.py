@@ -19,6 +19,7 @@ class LoginNotice:
 
 
 class OrderNotice:
+    ACCOMMODATION = "See accommodation"
     BUTTON_MORE = "More"
     BUTTON_BOOK = "Book"
     BOOKED = "Booked"
