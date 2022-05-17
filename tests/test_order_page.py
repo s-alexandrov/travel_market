@@ -1,3 +1,5 @@
+import time
+
 from fixtures.constants import LoginNotice
 from fixtures.constants import OrderNotice
 
@@ -16,4 +18,5 @@ class TestOrderPage:
         assert app.order_page.find_button_book() == OrderNotice.BUTTON_BOOK
         app.order_page.click_button_book()
         app.order_page.open_basket_page()
+        time.sleep(2)
         assert OrderNotice.BOOKED in app.order_page.check_book()
