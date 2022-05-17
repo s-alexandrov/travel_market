@@ -8,7 +8,7 @@ class TestOrderPage:
         """
         app.order_page.open_login_page()
         app.order_page.login()
-        assert app.order_page.find_button_accommodation() == OrderNotice.ACCOMMODATION
+        assert app.order_page.find_index_text() == OrderNotice.INDEX_TEXT
         app.order_page.click_button_see_accommodation()
         assert app.order_page.find_button_more() == OrderNotice.BUTTON_MORE
         app.order_page.click_button_more()

@@ -8,6 +8,7 @@ class OrderPage(BasePage):
     USERNAME_FIELD = (By.NAME, "username")
     PASSWORD_FIELD = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//form[@class='form-horizontal']/input[@class='form-control']")
+    INDEX_TEXT = (By.CLASS_NAME, "card-title")
     LOGIN_NAME = (By.XPATH, "//a[@class='nav-link dropdown-toggle']")
     SEE_ACCOMMODATION = (By.CLASS_NAME, "btn-danger")
     BUTTON = (By.CLASS_NAME, "btn-danger")
@@ -23,8 +24,8 @@ class OrderPage(BasePage):
         self.fill(locator=self.PASSWORD_FIELD, value=LoginNotice.password)
         self.click(locator=self.LOGIN_BUTTON)
 
-    def find_button_accommodation(self):
-        element = self.text(locator=self.BUTTON)
+    def find_index_text(self):
+        element = self.text(locator=self.INDEX_TEXT)
         return element
 
     def click_button_see_accommodation(self):
