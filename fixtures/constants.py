@@ -16,3 +16,9 @@ class LoginNotice:
     email = "qwerty345@gmail.com"
     ERROR_LOGIN = "Please enter a correct username and password. Note that both fields may be case-sensitive."
     INDEX_TEXT = "Rest, which you deserve"
+
+
+class OrderNotice:
+    BUTTON_MORE = "More"
+    BUTTON_BOOK = "Book"
+    BOOKED = "Booked"
