@@ -8,7 +8,7 @@ class OrderPage(BasePage):
     USERNAME_FIELD = (By.NAME, "username")
     PASSWORD_FIELD = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//form[@class='form-horizontal']/input[@class='form-control']")
-    LOGIN_TEXT = (By.CLASS_NAME, "dropdown-toggle")
+    LOGIN_NAME = (By.XPATH, "//a[@class='nav-link dropdown-toggle']")
     SEE_ACCOMMODATION = (By.CLASS_NAME, "btn-danger")
     BUTTON_MORE = (By.CLASS_NAME, "btn-danger")
     BUTTON_BOOK = (By.CLASS_NAME, "btn-danger")
@@ -25,20 +25,20 @@ class OrderPage(BasePage):
         self.click(locator=self.LOGIN_BUTTON)
 
     def success_log_in_text(self) -> str:
-        element = self.text(locator=self.LOGIN_TEXT)
+        element = self.text(locator=self.LOGIN_NAME)
         return element
 
     def click_button_see_accommodation(self):
         self.click(locator=self.SEE_ACCOMMODATION)
 
-    def find_button_more(self):
+    def find_button_more(self) -> str:
         element = self.text(locator=self.BUTTON_MORE)
         return element
 
     def click_button_more(self):
         self.click(locator=self.BUTTON_MORE)
 
-    def find_button_book(self):
+    def find_button_book(self) -> str:
         element = self.text(locator=self.BUTTON_MORE)
         return element
 
@@ -49,6 +49,6 @@ class OrderPage(BasePage):
         self.click(locator=self.LOGIN_TEXT)
         self.click(locator=self.BASKET_LINK)
 
-    def check_book(self):
+    def check_book(self) -> str:
         element = self.text(locator=self.BOOKED_TEXT)
         return element
