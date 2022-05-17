@@ -9,7 +9,7 @@ class OrderPage(BasePage):
     PASSWORD_FIELD = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//form[@class='form-horizontal']/input[@class='form-control']")
     INDEX_TEXT = (By.CLASS_NAME, "card")
-    LOGIN_NAME = (By.XPATH, "//a[@class='nav-link dropdown-toggle']")
+    LOGIN_TEXT = (By.CLASS_NAME, "dropdown-toggle")
     SEE_ACCOMMODATION = (By.CLASS_NAME, "btn-danger")
     BUTTON = (By.CLASS_NAME, "btn-danger")
     BASKET_LINK = (By.XPATH, "//a[@class='dropdown-item'][2]")
@@ -24,8 +24,8 @@ class OrderPage(BasePage):
         self.fill(locator=self.PASSWORD_FIELD, value=LoginNotice.password)
         self.click(locator=self.LOGIN_BUTTON)
 
-    def find_index_text(self):
-        element = self.text(locator=self.INDEX_TEXT)
+    def success_log_in_text(self) -> str:
+        element = self.text(locator=self.LOGIN_TEXT)
         return element
 
     def click_button_see_accommodation(self):
@@ -46,7 +46,7 @@ class OrderPage(BasePage):
         self.click(locator=self.BUTTON)
 
     def open_basket_page(self):
-        self.click(locator=self.LOGIN_NAME)
+        self.click(locator=self.LOGIN_TEXT)
         self.click(locator=self.BASKET_LINK)
 
     def check_book(self) -> str:
