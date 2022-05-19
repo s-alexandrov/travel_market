@@ -1,5 +1,5 @@
 # TravelMarket
-[![Python application](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml/badge.svg)](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml)
+[![Python application](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml/badge.svg)](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml) ![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:TravelMarket_Alexandrov/statusIcon.svg)
 
 Автотесты для сайта https://cypress-tourism-app.herokuapp.com/
 
