@@ -52,6 +52,7 @@ class TestLoginPage:
         Попытка авторизации незарегистированного пользователя.
         """
         app.login_page.open_login_page()
-        LoginNotice.login = "qwerty-qwerty"
+        LoginNotice.login = "qw"
+        LoginNotice.password = "353453534"
         app.login_page.entry_data_login()
         assert app.login_page.error_text() == LoginNotice.ERROR_LOGIN
