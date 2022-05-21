@@ -37,12 +37,21 @@ class TestLoginPage:
         app.login_page.entry_data_login()
         assert app.login_page.index_page_text() != LoginNotice.login
 
+    def test_login_with_empty_login_password(self, app):
+        """
+        Попытка авторизации с незаполненым логином и паролем.
+        """
+        app.login_page.open_login_page()
+        LoginNotice.login = None
+        LoginNotice.password = None
+        app.login_page.entry_data_login()
+        assert app.login_page.index_page_text() != LoginNotice.login
+
     def test_non_existent_user(self, app):
         """
         Попытка авторизации незарегистированного пользователя.
         """
         app.login_page.open_login_page()
-        LoginNotice.login = "qw"
-        LoginNotice.password = "353453534"
+        LoginNotice.login = "qwerty-qwerty"
         app.login_page.entry_data_login()
         assert app.login_page.error_text() == LoginNotice.ERROR_LOGIN
