@@ -7,10 +7,21 @@ from fixtures.constants import RegNotice
 class TestRegisterPage:
     def test_valid_registration(self, app):
         """
-        Успешная регистрация с валидными данными.
+        Успешная регистрация с заполнением всех полей.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
+        app.register_page.register_user(data=data)
+        assert app.register_page.success_log_in_text() == RegNotice.LOG_IN
+
+    def test_valid_registration_incomplete_data(self, app):
+        """
+        Успешная регистрация с заполнением не всех полей.
+        """
+        app.register_page.open_register_page()
+        data = RegisterUserModel.random()
+        data.firstname = None
+        data.email = None
         app.register_page.register_user(data=data)
         assert app.register_page.success_log_in_text() == RegNotice.LOG_IN
 
