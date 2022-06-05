@@ -1,10 +1,13 @@
 # TravelMarket
+
+### Автоматизированное тестирование UI сайта https://cypress-tourism-app.herokuapp.com/
 [![Python application](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml/badge.svg)](https://github.com/s-alexandrov/travel_market/actions/workflows/python-app.yml) ![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:TravelMarket_Alexandrov/statusIcon.svg)
 
-Автотесты для сайта https://cypress-tourism-app.herokuapp.com/
+Итоговая аттестационная работа по курсу "Python QA Engineer".
+Цель проекта - покрыть автотестами три раздела сайта: регистрация, авторизация и бронирование.
 
 Для локального запуска необходим Python версии 3.8 и выше.
-При первом запуске надо создать и активировать виртуальное окружение.
+При первом запуске надо создать и активировать виртуальное окружение:
 
 ```angular2html
 python3 -m venv env
@@ -13,13 +16,13 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-Установить зависимости проекта.
+Установить зависимости проекта:
 
 ```angular2html
 pip3 install -r requirements.txt
 ```
 
-Запуск тестов
+Запуск тестов:
 
 ```angular2html
 pytest
@@ -31,16 +34,29 @@ pytest
 Подробнее: https://docs.python.org/3/library/logging.html
 ```
 
-Проверка кода организована через pre-commit
+Локальная проверка кода организована через pre-commit
 
 ```angular2html
 Подробнее: https://pre-commit.com/
 ```
 
-По результатам тестирования генерируется отчет Allure
+По результатам тестирования генерируется отчет Allure.
+Запуск тестов:
 
 ```angular2html
-Подробнее: https://docs.qameta.io/allure/
+pytest --alluredir=allure_results
+```
+
+Генерация отчета:
+
+```angular2html
+allure serve allure_results
+```
+
+Тест-кейсы:
+
+```angular2html
+allure serve allure_results
 ```
 
 ### План работы:

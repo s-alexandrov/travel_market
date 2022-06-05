@@ -9,7 +9,7 @@ class OrderPage(BasePage):
     PASSWORD_FIELD = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//form[@class='form-horizontal']/input[@class='form-control']")
     LOGIN_TEXT = (By.CLASS_NAME, "dropdown-toggle")
-    SEE_ACCOMMODATION = (By.CLASS_NAME, "btn-danger")
+    # SEE_ACCOMMODATION = (By.CLASS_NAME, "btn-danger")
     BUTTON = (By.CLASS_NAME, "btn-danger")
     BASKET_LINK = (By.XPATH, "//a[@class='dropdown-item'][2]")
     BOOKED_TEXT = (By.CLASS_NAME, "basket_summary")
@@ -27,22 +27,12 @@ class OrderPage(BasePage):
         element = self.text(locator=self.LOGIN_TEXT)
         return element
 
-    def click_button_see_accommodation(self):
-        self.click(locator=self.SEE_ACCOMMODATION)
-
-    def find_button_more(self) -> str:
-        element = self.text(locator=self.BUTTON)
-        return element
-
-    def click_button_more(self):
+    def click_button(self):
         self.click(locator=self.BUTTON)
 
-    def find_button_book(self) -> str:
+    def find_button_text(self) -> str:
         element = self.text(locator=self.BUTTON)
         return element
-
-    def click_button_book(self):
-        self.click(locator=self.BUTTON)
 
     def open_basket_page(self):
         self.click(locator=self.LOGIN_TEXT)
