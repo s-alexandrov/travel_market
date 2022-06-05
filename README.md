@@ -57,7 +57,7 @@ allure serve allure_results
 Тест-кейсы:
 
 ```angular2html
-allure serve allure_results
+test-cases.xlsx
 ```
 
 ### План работы:
